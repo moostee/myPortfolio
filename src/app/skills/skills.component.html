@@ -1,0 +1,59 @@
+<div class="container-fluid" style="background-color: #f3f3f5;">
+    <div class="container py-4 pt-4">
+  
+        <!-- Second section -->
+        <section id="skills">
+  
+            <!-- First row -->
+            <div class="row py-5">
+  
+                <!--First column-->
+                <div class="col-lg-6 col-md-12 mb-3 wow fadeIn" data-wow-delay="0.4s">
+  
+                <!--Section heading-->
+                <div class="d-flex justify-content-start">
+                    <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">My <strong>experience</strong></h4>
+                </div>
+                        <blockquote *ngFor="let workExperience of workExperiences" class="blockquote bq-warning mt-1 mb-4">                            
+                            <div class="row"> <i class="fa fa-briefcase fa-x mb-1 mr-3 ml-3 dark-grey-text" aria-hidden="true"></i>
+                              <p class="font-weight-bold ml-1">{{ workExperience.jobTitle }}</p>
+                            </div>
+                            <p class="font-weight-bold ml-1 dark-grey-text"> {{ workExperience.org }}</p>
+                            <p class="font-weight-bold ml-1 dark-grey-text "> {{ GetWorkingDate(workExperience.Date.startDate, workExperience.Date.endDate) }}</p>
+                            <!-- <p *ngFor="let jd of workExperience.jobDescription" class="mb-0 ml-1 light-grey-text">{{ jd }}</p> -->
+                      </blockquote>
+  
+                </div>
+                <!--/First column-->
+  
+                <!--Second column-->
+                <div class="col-lg-5 offset-lg-1 col-md-12 mb-4 wow fadeIn" data-wow-delay="0.4s">
+  
+                <!--Second heading-->
+                <div class="d-flex justify-content-start">
+                    <h4 class="text-center text-uppercase mb-5 pb-3 mt-4 wow fadeIn" data-wow-delay="0.2s">Development <strong>Skills</strong></h4>
+                </div>
+                    <ng-template>
+                        
+                    </ng-template>
+                    
+                    <!--Description-->
+                    <section *ngFor="let skill of skills" class="mb-2">
+                        <p class="black-text text-uppercase font-weight-bold" align="justify">{{ skill.name }}</p>
+                        <!-- <mat-progress-bar  mode="determinate" value="40"></mat-progress-bar> -->  
+                        <div class="progress">                              
+                            <div [style.width.%]='skill.competence' class="progress-bar" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </section>                   
+  
+                </div>
+                <!--/Second column-->
+  
+            </div>
+            <!--/First row-->
+  
+        </section>
+        <!-- /.Second section -->
+  
+  </div>
+  </div>
