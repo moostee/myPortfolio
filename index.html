@@ -1,46 +1,47 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta name="description" content="Welcome to mustapha akinsola omotunwase's portfolio. A software engineer with the immense ability unlearn, learn and re-learn.">
-    <meta name="keywords" content="Mustapha Omotunwase,Software Engineer, Portfolio">
-    <meta name="author" content="Mustapha Akinsola Omotunwase">
-    <title>Mustapha Akinsola</title>
-    <base href="./">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-</head>
-
-<body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <app-root></app-root>
- 
-    <script>
-        // Add scrollspy to <body>
-        $(document).ready(function () {
-            var scrollLink = $('.scroll');
-            scrollLink.click(function(e){
-                e.preventDefault();
-                $('body,html').animate({
-                    scrollTop : $(this.hash).offset().top
-                },1000);
-            });
-
-            //Active link switching
-            $(window).scroll(function(){
-                var scrollBarLocation = $(this).scrollTop();
-                scrollLink.each(function(){
-                    var sectionOffset = $(this.hash).offset().top
-                    if (sectionOffset <= scrollBarLocation) {
-                        $(this).parent().addClass('active');
-                        $(this).parent().siblings().removeClass('active');
-                    }
-                })
-            })
-            
+  <meta charset="utf-8">
+  <title>Mustapha Akinsola</title>
+  <base href="./">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="My portfolio">
+  <meta name="keywords" content="mustapha omotunwase akinsola, moostee, mustapha akinsola profile, software engineer">
+  <meta name="author" content="Mustapha Akinsola Omotunwase">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600|Raleway&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1976d2">
+<link rel="stylesheet" href="styles.be78a1fa5a8158a89e59.css"></head>
+<body class="mat-typography">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <app-root></app-root>
+  <script>
+    // Add scrollspy to <body>
+    $(document).ready(function () {
+        var scrollLink = $('.scroll');
+        scrollLink.click(function(e){
+            e.preventDefault();
+            $('body,html').animate({
+                scrollTop : $(this.hash).offset().top
+            },1000);
         });
-    </script>
-<script type="text/javascript" src="runtime.js"></script><script type="text/javascript" src="polyfills.js"></script><script type="text/javascript" src="styles.js"></script><script type="text/javascript" src="scripts.js"></script><script type="text/javascript" src="vendor.js"></script><script type="text/javascript" src="main.js"></script></body>
 
+        //Active link switching
+        $(window).scroll(function(){
+            var scrollBarLocation = $(this).scrollTop();
+            scrollLink.each(function(){
+                var sectionOffset = $(this.hash).offset().top
+                if (sectionOffset <= scrollBarLocation) {
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active');
+                }
+            })
+        })
+        
+    });
+</script>
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+<script src="runtime-es2015.0811dcefd377500b5b1a.js" type="module"></script><script src="runtime-es5.0811dcefd377500b5b1a.js" nomodule defer></script><script src="polyfills-es5.277e2e1d6fb2daf91a5c.js" nomodule defer></script><script src="polyfills-es2015.ca64e4516afbb1b890d5.js" type="module"></script><script src="scripts.7df7da1f80184ed5f272.js" defer></script><script src="main-es2015.f52625c00c19b2a01a9d.js" type="module"></script><script src="main-es5.f52625c00c19b2a01a9d.js" nomodule defer></script></body>
 </html>
